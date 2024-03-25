@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  redis:
+    image: redis:latest
+    command: redis-server --appendonly yes
+    volumes:
+      - ./.volumes/redis:/data
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_DATABASE: 0
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: amir123
+      POSTGRES_DB: ecommerce
+    volumes:
+      - ./.volumes/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
