@@ -12,10 +12,10 @@ def clean_html(raw_html):
 
 # Replace sender@example.com with your "From" address.
 # This address must be verified with Amazon SES.
-SENDER = "FastAPI <changethisemailaddress@gmail.com>"
+SENDER = "FastAPI <testapi@clowmail.com>"
 
 # If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
-AWS_REGION = "ap-south-1"
+AWS_REGION = "eu-central-1"
 
 # The subject line for the email.
 SUBJECT = "New Order Placed"
